@@ -3,6 +3,7 @@ module.exports = {
     title: `Alex Aubuchon`,
     description: `Alex Aubuchon's personal site.`,
     author: `Alex Aubuchon`,
+    siteUrl: `https://aub.dev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,6 +30,8 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-robots-txt',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-offline',
   ],
 };

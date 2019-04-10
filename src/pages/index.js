@@ -4,9 +4,16 @@ import CandyHref from '../components/CandyHref';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import ThrashRule from '../components/ThrashRule';
+import PaperRef from '../components/PaperRef';
+import breakpoints from '../lib/breakpoints';
 
 const HeaderDiv = styled.div`
-  margin-top: 5rem;
+  @media ${breakpoints.mobileL} {
+    margin-top: 3rem;
+  }
+  @media ${breakpoints.laptop} {
+    margin-top: 5rem;
+  }
 `;
 
 const IndexPage = () => (
@@ -48,6 +55,39 @@ const IndexPage = () => (
       <CandyHref href="https://linkedin.com/in/a-lxe/">LinkedIn</CandyHref>, or
       send me an <CandyHref href="mailto:alex@aub.dev">email</CandyHref>.
     </p>
+
+    <ThrashRule />
+
+    <h2>Publications</h2>
+
+    <PaperRef
+      title="Classification of Electronic Devices and Software Processes via Unintentional Electronic Emissions With Neural Decoding Algorithms"
+      journal="IEEE Transactions on Electromagnetic Compatibility"
+      date="March 2019"
+      authors={[
+        'Laura J. Mariano',
+        'Alexander Aubuchon',
+        'Troy Lau',
+        'Onur Ozdemir',
+        'Tomo Lazovich',
+        'John Coakley',
+      ]}
+      href="https://ieeexplore.ieee.org/document/8674781"
+    />
+
+    <PaperRef
+      title="Real-time Machine Learning Prediction of an Agent-Based Model for Urban Decision-making (Extended Abstract)"
+      journal="AAMAS '18 Proceedings of the 17th International Conference on Autonomous Agents and MultiAgent Systems"
+      date="July 2018"
+      authors={[
+        'Yan Zhang',
+        'Arnaud Grignard',
+        'Kevin Lyons',
+        'Alexander Aubuchon',
+        'Kent Larson',
+      ]}
+      href="https://dl.acm.org/citation.cfm?id=3238109"
+    />
   </Layout>
 );
 
