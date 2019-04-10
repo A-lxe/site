@@ -17,8 +17,8 @@ const StyledA = styled.a`
   }
 `;
 
-const CandyHref = ({ children, href, fg, bg }) => (
-  <StyledA href={href} fg={fg} bg={bg}>
+const CandyHref = ({ children, href, fg, bg, target }) => (
+  <StyledA href={href} fg={fg} bg={bg} target={target || '_blank'}>
     {children}
   </StyledA>
 );
@@ -28,6 +28,7 @@ CandyHref.propTypes = {
   href: PropTypes.string.isRequired,
   fg: PropTypes.string,
   bg: PropTypes.string,
+  target: PropTypes.string,
 };
 
 export default CandyHref;
