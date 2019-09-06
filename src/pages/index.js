@@ -56,6 +56,11 @@ const IndexPage = () => (
       send me an <CandyHref href="mailto:alex@aub.dev">email</CandyHref>.
     </p>
 
+    <p>
+      You can find the source for this site{' '}
+      <CandyHref href="https://github.com/a-lxe/site">here</CandyHref>.
+    </p>
+
     <ThrashRule />
 
     <h2>Publications</h2>
