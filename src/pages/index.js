@@ -23,6 +23,9 @@ const IndexPage = () => (
       keywords={[
         'alex',
         'aub',
+        'reasonablytall',
+        'reasonably',
+        'tall',
         'alxe',
         'aubuchon',
         'dev',
@@ -51,14 +54,19 @@ const IndexPage = () => (
 
     <p>
       You can reach me at{' '}
-      <CandyHref href="https://github.com/a-lxe/">GitHub</CandyHref> and{' '}
+      <CandyHref href="https://github.com/reasonablytall/">GitHub</CandyHref> and{' '}
       <CandyHref href="https://linkedin.com/in/a-lxe/">LinkedIn</CandyHref>, or
       send me an <CandyHref href="mailto:alex@aub.dev">email</CandyHref>.
     </p>
 
     <p>
+      My resume (and its source) can be seen{' '}
+      <CandyHref href="https://github.com/reasonablytall/resume/blob/master/resume.pdf">here</CandyHref>.
+    </p>
+
+    <p>
       You can find the source for this site{' '}
-      <CandyHref href="https://github.com/a-lxe/site">here</CandyHref>.
+      <CandyHref href="https://github.com/reasonablytall/site">here</CandyHref>.
     </p>
 
     <ThrashRule />
