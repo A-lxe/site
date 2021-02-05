@@ -1,65 +1,45 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Card from '../components/Card';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Alex Aubuchon</title>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+      <Card>
+        <h1>The Pitch</h1>
+        <p>
+          Hello! I'm Alexander Aubuchon (though I normally go by Alex, or
+          whatever clever nickname you can come up with next), a friendly type
+          of person hailing from Massachusetts. I studied computer science plus
+          some physics at Northeastern. I like games, rock climbing, and
+          figuring stuff out. Right now I'm working on efficient systems at
+          Stripe.
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
+        <p>
+          Previously I've worked at a few labs, a shoe company, a search
+          company, and a world-class physics experiment. You can check out my
+          resume for a full list{' '}
           <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+            href="https://github.com/reasonablytall/resume/blob/master/resume.pdf"
+            target="_blank"
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            here
           </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+          .
+        </p>
+        <p>
+          And the source for this site{' '}
+          <a href="https://github.com/reasonablytall/site" target="_blank">
+            here
           </a>
-        </div>
-      </main>
+          .
+        </p>
+      </Card>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <footer></footer>
     </div>
-  )
+  );
 }
