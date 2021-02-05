@@ -19,8 +19,8 @@ export default function Backdrop() {
       gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
 
       const uniforms = {
-        time: time * 0.001,
-        resolution: [gl.canvas.width, gl.canvas.height],
+        u_resolution: [gl.canvas.width, gl.canvas.height],
+        u_time: time * 0.001,
       };
 
       gl.useProgram(programInfo.program);
@@ -45,21 +45,22 @@ void main() {
       </script>
       <script id="fs" type="notjs">
         {`
+#ifdef GL_ES
 precision mediump float;
+#endif
 
-uniform vec2 resolution;
-uniform float time;
+uniform vec2 u_resolution;
+uniform float u_time;
 
 void main() {
-  vec2 uv = gl_FragCoord.xy / resolution;
-  float color = 0.0;
-  // lifted from glslsandbox.com
-  color += sin( uv.x * cos( time / 3.0 ) * 60.0 ) + cos( uv.y * cos( time / 2.80 ) * 10.0 );
-  color += sin( uv.y * sin( time / 2.0 ) * 40.0 ) + cos( uv.x * sin( time / 1.70 ) * 40.0 );
-  color += sin( uv.x * sin( time / 1.0 ) * 10.0 ) + sin( uv.y * sin( time / 3.50 ) * 80.0 );
-  color *= sin( time / 10.0 ) * 0.5;
+    vec2 st = gl_FragCoord.xy/u_resolution.xy;
+    vec3 colA = vec3(0.080,0.080,0.080);
+    vec3 colB = vec3(0.155,0.155,0.155);
 
-  gl_FragColor = vec4( vec3( color * 0.5, sin( color + time / 2.5 ) * 0.75, color ), 1.0 );
+    float val = cos(fract(100.0*st.x)+u_time)*cos(1000.0*st.y+u_time);
+    vec3 color = mix(colA,colB,val);
+
+    gl_FragColor = vec4(color,1.0);
 }`}
       </script>
     </>
