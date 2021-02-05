@@ -3,7 +3,7 @@ import Card from '../components/Card';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Alex Aubuchon</title>
       </Head>
@@ -40,6 +40,6 @@ export default function Home() {
       </Card>
 
       <footer></footer>
-    </div>
+    </>
   );
 }
