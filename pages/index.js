@@ -11,12 +11,11 @@ export default function Home() {
       <Card>
         <h1>The Pitch</h1>
         <p>
-          Hello! I'm Alexander Aubuchon (though I normally go by Alex, or
-          whatever clever nickname you can come up with next), a friendly type
-          of person hailing from Massachusetts. I studied computer science plus
-          some physics at Northeastern. I like games, rock climbing, and
-          figuring stuff out. Right now I'm working on efficient systems at
-          Stripe.
+          Hello! I'm Alexander Aubuchon (though I normally go by Alex, or really
+          whatever gets my attention), a friendly type of person hailing from
+          Massachusetts. I studied computer science plus some physics at
+          Northeastern. I like games, rock climbing, and figuring stuff out.
+          Right now I'm working on efficient systems at Stripe.
         </p>
         <p>
           Previously I've worked at a few labs, a shoe company, a search
