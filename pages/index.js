@@ -1,7 +1,13 @@
 import Head from 'next/head';
 import Card from '../components/Card';
+import { execSync } from 'child_process';
 
-export default function Home() {
+export async function getStaticProps(context) {
+  const gitBranch = execSync('git branch --show-current').toString();
+  return { props: { gitBranch } };
+}
+
+export default function Home({ gitBranch }) {
   return (
     <>
       <Head>
@@ -31,7 +37,10 @@ export default function Home() {
         </p>
         <p>
           And the source for this site{' '}
-          <a href="https://github.com/reasonablytall/site" target="_blank">
+          <a
+            href={`https://github.com/reasonablytall/site/tree/${gitBranch}/`}
+            target="_blank"
+          >
             here
           </a>
           .
